@@ -2,11 +2,11 @@
 <!-- edited with XMLSpy v2023 rel. 2 (x64) (http://www.altova.com) by vitali (home) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:bc="http://datamodel.nces.by/by-core/0.1" targetNamespace="http://datamodel.nces.by/by-core/0.1">
 	<xs:annotation>
-		<xs:documentation>Базовая модель данных ЭП.</xs:documentation>
+		<xs:documentation>ГЃГ Г§Г®ГўГ Гї Г¬Г®Г¤ГҐГ«Гј Г¤Г Г­Г­Г»Гµ ГќГЏ.</xs:documentation>
 	</xs:annotation>
 	<xs:simpleType name="AddressCategoryType">
 		<xs:annotation>
-			<xs:documentation>Тип адреса</xs:documentation>
+			<xs:documentation>Г’ГЁГЇ Г Г¤Г°ГҐГ±Г </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="LOCATION"/>
@@ -16,102 +16,102 @@
 	</xs:simpleType>
 	<xs:complexType name="AddressType">
 		<xs:annotation>
-			<xs:documentation>Описание адреса (адресная информация)</xs:documentation>
+			<xs:documentation>ГЋГЇГЁГ±Г Г­ГЁГҐ Г Г¤Г°ГҐГ±Г  (Г Г¤Г°ГҐГ±Г­Г Гї ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГї)</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="AddressApartment" type="bc:TextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Квартира</xs:documentation>
+					<xs:documentation>ГЉГўГ Г°ГІГЁГ°Г </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AddressBuilding" type="bc:TextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Строение/корпус</xs:documentation>
+					<xs:documentation>Г‘ГІГ°Г®ГҐГ­ГЁГҐ/ГЄГ®Г°ГЇГіГ±</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AddressCityName" type="bc:TextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Город</xs:documentation>
+					<xs:documentation>ГѓГ®Г°Г®Г¤</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AddressHouse" type="bc:TextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Дом</xs:documentation>
+					<xs:documentation>Г„Г®Г¬</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AddressPrivateMailbox" type="bc:TextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Почтовый индекс</xs:documentation>
+					<xs:documentation>ГЏГ®Г·ГІГ®ГўГ»Г© ГЁГ­Г¤ГҐГЄГ±</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AddressStreet" type="bc:TextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Улица</xs:documentation>
+					<xs:documentation>Г“Г«ГЁГ¶Г </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AddressCountry" type="bc:CountryType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Страна</xs:documentation>
+					<xs:documentation>Г‘ГІГ°Г Г­Г </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="CountryType">
 		<xs:annotation>
-			<xs:documentation>Описание страны в соответствии с ISO-</xs:documentation>
+			<xs:documentation>ГЋГЇГЁГ±Г Г­ГЁГҐ Г±ГІГ°Г Г­Г» Гў Г±Г®Г®ГІГўГҐГІГ±ГІГўГЁГЁ Г± ISO-</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Alpha2" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Alpha 2 код страны</xs:documentation>
+					<xs:documentation>Alpha 2 ГЄГ®Г¤ Г±ГІГ°Г Г­Г»</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Наименование страны</xs:documentation>
+					<xs:documentation>ГЌГ ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ Г±ГІГ°Г Г­Г»</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="DocumentCategoryType">
 		<xs:annotation>
-			<xs:documentation>Виды документов удостоверяющих личность</xs:documentation>
+			<xs:documentation>Г‚ГЁГ¤Г» Г¤Г®ГЄГіГ¬ГҐГ­ГІГ®Гў ГіГ¤Г®Г±ГІГ®ГўГҐГ°ГїГѕГ№ГЁГµ Г«ГЁГ·Г­Г®Г±ГІГј</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="DocumentCategoryName" type="bc:TextType" form="qualified" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Наименование вида документа, удостоверяющего личность</xs:documentation>
+					<xs:documentation>ГЌГ ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГўГЁГ¤Г  Г¤Г®ГЄГіГ¬ГҐГ­ГІГ , ГіГ¤Г®Г±ГІГ®ГўГҐГ°ГїГѕГ№ГҐГЈГ® Г«ГЁГ·Г­Г®Г±ГІГј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="EducationLevelType">
 		<xs:annotation>
-			<xs:documentation>Уровни полученного образования</xs:documentation>
+			<xs:documentation>Г“Г°Г®ГўГ­ГЁ ГЇГ®Г«ГіГ·ГҐГ­Г­Г®ГЈГ® Г®ГЎГ°Г Г§Г®ГўГ Г­ГЁГї</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="EducationLevelCode" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Код уровня образования</xs:documentation>
+					<xs:documentation>ГЉГ®Г¤ ГіГ°Г®ГўГ­Гї Г®ГЎГ°Г Г§Г®ГўГ Г­ГЁГї</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EducationLevelDescription" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Описание уровня образования</xs:documentation>
+					<xs:documentation>ГЋГЇГЁГ±Г Г­ГЁГҐ ГіГ°Г®ГўГ­Гї Г®ГЎГ°Г Г§Г®ГўГ Г­ГЁГї</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="EducationType">
 		<xs:annotation>
-			<xs:documentation>Образование</xs:documentation>
+			<xs:documentation>ГЋГЎГ°Г Г§Г®ГўГ Г­ГЁГҐ</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="bc:EducationLevelType">
 				<xs:sequence>
 					<xs:element name="EducationDescriptionText" type="bc:TextType" minOccurs="1" maxOccurs="1">
 						<xs:annotation>
-							<xs:documentation>Нименование учебного заведения, в котором получено образование</xs:documentation>
+							<xs:documentation>ГЌГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГіГ·ГҐГЎГ­Г®ГЈГ® Г§Г ГўГҐГ¤ГҐГ­ГЁГї, Гў ГЄГ®ГІГ®Г°Г®Г¬ ГЇГ®Г«ГіГ·ГҐГ­Г® Г®ГЎГ°Г Г§Г®ГўГ Г­ГЁГҐ</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
@@ -120,146 +120,146 @@
 	</xs:complexType>
 	<xs:complexType name="HiTechGoodsCandidateType">
 		<xs:annotation>
-			<xs:documentation>Таблица сведений для оценки товаров (работ, услуг) установленным показателям.</xs:documentation>
+			<xs:documentation>Г’Г ГЎГ«ГЁГ¶Г  Г±ГўГҐГ¤ГҐГ­ГЁГ© Г¤Г«Гї Г®Г¶ГҐГ­ГЄГЁ ГІГ®ГўГ Г°Г®Гў (Г°Г ГЎГ®ГІ, ГіГ±Г«ГіГЈ) ГіГ±ГІГ Г­Г®ГўГ«ГҐГ­Г­Г»Г¬ ГЇГ®ГЄГ Г§Г ГІГҐГ«ГїГ¬.</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="CompanyAddedValue" type="xs:decimal" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Объем валовой добавленной стоимости организации за год, предшествующий году подачи заявления (без НДС), тысяч рублей</xs:documentation>
+					<xs:documentation>ГЋГЎГєГҐГ¬ ГўГ Г«Г®ГўГ®Г© Г¤Г®ГЎГ ГўГ«ГҐГ­Г­Г®Г© Г±ГІГ®ГЁГ¬Г®Г±ГІГЁ Г®Г°ГЈГ Г­ГЁГ§Г Г¶ГЁГЁ Г§Г  ГЈГ®Г¤, ГЇГ°ГҐГ¤ГёГҐГ±ГІГўГіГѕГ№ГЁГ© ГЈГ®Г¤Гі ГЇГ®Г¤Г Г·ГЁ Г§Г ГїГўГ«ГҐГ­ГЁГї (ГЎГҐГ§ ГЌГ„Г‘), ГІГ»Г±ГїГ· Г°ГіГЎГ«ГҐГ©</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CompanyOutputValue" type="xs:decimal" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Стоимостной объем производства продукции (товаров, работ, услуг) организации за год, предшествующий году подачи заявления (без НДС), тысяч рублей</xs:documentation>
+					<xs:documentation>Г‘ГІГ®ГЁГ¬Г®Г±ГІГ­Г®Г© Г®ГЎГєГҐГ¬ ГЇГ°Г®ГЁГ§ГўГ®Г¤Г±ГІГўГ  ГЇГ°Г®Г¤ГіГЄГ¶ГЁГЁ (ГІГ®ГўГ Г°Г®Гў, Г°Г ГЎГ®ГІ, ГіГ±Г«ГіГЈ) Г®Г°ГЈГ Г­ГЁГ§Г Г¶ГЁГЁ Г§Г  ГЈГ®Г¤, ГЇГ°ГҐГ¤ГёГҐГ±ГІГўГіГѕГ№ГЁГ© ГЈГ®Г¤Гі ГЇГ®Г¤Г Г·ГЁ Г§Г ГїГўГ«ГҐГ­ГЁГї (ГЎГҐГ§ ГЌГ„Г‘), ГІГ»Г±ГїГ· Г°ГіГЎГ«ГҐГ©</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CompanyRAndDValue" type="xs:decimal" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Объем расходов на научно-исследовательские, опытно-конструкторские, опытно-технологические работы организации за год, предшествующий году подачи заявления (далее – НИОКТР), включая НИОКТР, выполненные собственными силами и по договорам со сторонними организациями (без НДС), тысяч рублей</xs:documentation>
+					<xs:documentation>ГЋГЎГєГҐГ¬ Г°Г Г±ГµГ®Г¤Г®Гў Г­Г  Г­Г ГіГ·Г­Г®-ГЁГ±Г±Г«ГҐГ¤Г®ГўГ ГІГҐГ«ГјГ±ГЄГЁГҐ, Г®ГЇГ»ГІГ­Г®-ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г±ГЄГЁГҐ, Г®ГЇГ»ГІГ­Г®-ГІГҐГµГ­Г®Г«Г®ГЈГЁГ·ГҐГ±ГЄГЁГҐ Г°Г ГЎГ®ГІГ» Г®Г°ГЈГ Г­ГЁГ§Г Г¶ГЁГЁ Г§Г  ГЈГ®Г¤, ГЇГ°ГҐГ¤ГёГҐГ±ГІГўГіГѕГ№ГЁГ© ГЈГ®Г¤Гі ГЇГ®Г¤Г Г·ГЁ Г§Г ГїГўГ«ГҐГ­ГЁГї (Г¤Г Г«ГҐГҐ вЂ“ ГЌГ€ГЋГЉГ’Гђ), ГўГЄГ«ГѕГ·Г Гї ГЌГ€ГЋГЉГ’Гђ, ГўГ»ГЇГ®Г«Г­ГҐГ­Г­Г»ГҐ Г±Г®ГЎГ±ГІГўГҐГ­Г­Г»Г¬ГЁ Г±ГЁГ«Г Г¬ГЁ ГЁ ГЇГ® Г¤Г®ГЈГ®ГўГ®Г°Г Г¬ Г±Г® Г±ГІГ®Г°Г®Г­Г­ГЁГ¬ГЁ Г®Г°ГЈГ Г­ГЁГ§Г Г¶ГЁГїГ¬ГЁ (ГЎГҐГ§ ГЌГ„Г‘), ГІГ»Г±ГїГ· Г°ГіГЎГ«ГҐГ©</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CompanyShippedHiTechExportValue" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>на экспорт товаров (работ, услуг), претендующих на отнесение к высокотехнологичным из объема отгруженной продукции в целом по организации за год, предшествующий году подачи заявления (без НДС), тысяч рублей</xs:documentation>
+					<xs:documentation>Г­Г  ГЅГЄГ±ГЇГ®Г°ГІ ГІГ®ГўГ Г°Г®Гў (Г°Г ГЎГ®ГІ, ГіГ±Г«ГіГЈ), ГЇГ°ГҐГІГҐГ­Г¤ГіГѕГ№ГЁГµ Г­Г  Г®ГІГ­ГҐГ±ГҐГ­ГЁГҐ ГЄ ГўГ»Г±Г®ГЄГ®ГІГҐГµГ­Г®Г«Г®ГЈГЁГ·Г­Г»Г¬ ГЁГ§ Г®ГЎГєГҐГ¬Г  Г®ГІГЈГ°ГіГ¦ГҐГ­Г­Г®Г© ГЇГ°Г®Г¤ГіГЄГ¶ГЁГЁ Гў Г¶ГҐГ«Г®Г¬ ГЇГ® Г®Г°ГЈГ Г­ГЁГ§Г Г¶ГЁГЁ Г§Г  ГЈГ®Г¤, ГЇГ°ГҐГ¤ГёГҐГ±ГІГўГіГѕГ№ГЁГ© ГЈГ®Г¤Гі ГЇГ®Г¤Г Г·ГЁ Г§Г ГїГўГ«ГҐГ­ГЁГї (ГЎГҐГ§ ГЌГ„Г‘), ГІГ»Г±ГїГ· Г°ГіГЎГ«ГҐГ©</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CompanyShippedHiTechValue" type="xs:decimal" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>товаров (работ, услуг), претендующих на отнесение к высокотехнологичным из объема отгруженной продукции в целом по организации за год, предшествующий году подачи заявления (без НДС), тысяч рублей</xs:documentation>
+					<xs:documentation>ГІГ®ГўГ Г°Г®Гў (Г°Г ГЎГ®ГІ, ГіГ±Г«ГіГЈ), ГЇГ°ГҐГІГҐГ­Г¤ГіГѕГ№ГЁГµ Г­Г  Г®ГІГ­ГҐГ±ГҐГ­ГЁГҐ ГЄ ГўГ»Г±Г®ГЄГ®ГІГҐГµГ­Г®Г«Г®ГЈГЁГ·Г­Г»Г¬ ГЁГ§ Г®ГЎГєГҐГ¬Г  Г®ГІГЈГ°ГіГ¦ГҐГ­Г­Г®Г© ГЇГ°Г®Г¤ГіГЄГ¶ГЁГЁ Гў Г¶ГҐГ«Г®Г¬ ГЇГ® Г®Г°ГЈГ Г­ГЁГ§Г Г¶ГЁГЁ Г§Г  ГЈГ®Г¤, ГЇГ°ГҐГ¤ГёГҐГ±ГІГўГіГѕГ№ГЁГ© ГЈГ®Г¤Гі ГЇГ®Г¤Г Г·ГЁ Г§Г ГїГўГ«ГҐГ­ГЁГї (ГЎГҐГ§ ГЌГ„Г‘), ГІГ»Г±ГїГ· Г°ГіГЎГ«ГҐГ©</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CompanyShippedValue" type="xs:decimal" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Объем отгруженной продукции в целом по организации за год, предшествующий году подачи заявления (без НДС), тысяч рублей</xs:documentation>
+					<xs:documentation>ГЋГЎГєГҐГ¬ Г®ГІГЈГ°ГіГ¦ГҐГ­Г­Г®Г© ГЇГ°Г®Г¤ГіГЄГ¶ГЁГЁ Гў Г¶ГҐГ«Г®Г¬ ГЇГ® Г®Г°ГЈГ Г­ГЁГ§Г Г¶ГЁГЁ Г§Г  ГЈГ®Г¤, ГЇГ°ГҐГ¤ГёГҐГ±ГІГўГіГѕГ№ГЁГ© ГЈГ®Г¤Гі ГЇГ®Г¤Г Г·ГЁ Г§Г ГїГўГ«ГҐГ­ГЁГї (ГЎГҐГ§ ГЌГ„Г‘), ГІГ»Г±ГїГ· Г°ГіГЎГ«ГҐГ©</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GoodsName" type="bc:TextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Наименование товара (работы, услуги)</xs:documentation>
+					<xs:documentation>ГЌГ ГЁГ¬ГҐГ­Г®ГўГ Г­ГЁГҐ ГІГ®ГўГ Г°Г  (Г°Г ГЎГ®ГІГ», ГіГ±Г«ГіГЈГЁ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GoodsOKEDCode" type="bc:TextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Код общегосударственного классификатора Республики Беларусь ОКРБ 007-2012 «Классификатор продукции по видам экономической деятельности»</xs:documentation>
+					<xs:documentation>ГЉГ®Г¤ Г®ГЎГ№ГҐГЈГ®Г±ГіГ¤Г Г°Г±ГІГўГҐГ­Г­Г®ГЈГ® ГЄГ«Г Г±Г±ГЁГґГЁГЄГ ГІГ®Г°Г  ГђГҐГ±ГЇГіГЎГ«ГЁГЄГЁ ГЃГҐГ«Г Г°ГіГ±Гј ГЋГЉГђГЃ 007-2012 В«ГЉГ«Г Г±Г±ГЁГґГЁГЄГ ГІГ®Г° ГЇГ°Г®Г¤ГіГЄГ¶ГЁГЁ ГЇГ® ГўГЁГ¤Г Г¬ ГЅГЄГ®Г­Г®Г¬ГЁГ·ГҐГ±ГЄГ®Г© Г¤ГҐГїГІГҐГ«ГјГ­Г®Г±ГІГЁВ»</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PatentDescription" type="bc:TextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Наличие охранного документа на объект права промышленной собственности, который применен (содержится, включен) в товаре (работе, услуге), претендующем на отнесение к высокотехнологичному</xs:documentation>
+					<xs:documentation>ГЌГ Г«ГЁГ·ГЁГҐ Г®ГµГ°Г Г­Г­Г®ГЈГ® Г¤Г®ГЄГіГ¬ГҐГ­ГІГ  Г­Г  Г®ГЎГєГҐГЄГІ ГЇГ°Г ГўГ  ГЇГ°Г®Г¬Г»ГёГ«ГҐГ­Г­Г®Г© Г±Г®ГЎГ±ГІГўГҐГ­Г­Г®Г±ГІГЁ, ГЄГ®ГІГ®Г°Г»Г© ГЇГ°ГЁГ¬ГҐГ­ГҐГ­ (Г±Г®Г¤ГҐГ°Г¦ГЁГІГ±Гї, ГўГЄГ«ГѕГ·ГҐГ­) Гў ГІГ®ГўГ Г°ГҐ (Г°Г ГЎГ®ГІГҐ, ГіГ±Г«ГіГЈГҐ), ГЇГ°ГҐГІГҐГ­Г¤ГіГѕГ№ГҐГ¬ Г­Г  Г®ГІГ­ГҐГ±ГҐГ­ГЁГҐ ГЄ ГўГ»Г±Г®ГЄГ®ГІГҐГµГ­Г®Г«Г®ГЈГЁГ·Г­Г®Г¬Гі</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="IdentificationType">
 		<xs:annotation>
-			<xs:documentation>Справочник видов идентификаторов</xs:documentation>
+			<xs:documentation>Г‘ГЇГ°Г ГўГ®Г·Г­ГЁГЄ ГўГЁГ¤Г®Гў ГЁГ¤ГҐГ­ГІГЁГґГЁГЄГ ГІГ®Г°Г®Гў</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="IdentificationDescriptionText" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Описание вида идентификации</xs:documentation>
+					<xs:documentation>ГЋГЇГЁГ±Г Г­ГЁГҐ ГўГЁГ¤Г  ГЁГ¤ГҐГ­ГІГЁГґГЁГЄГ Г¶ГЁГЁ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IdentificationTypeID" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Идентификатор вида классификации</xs:documentation>
+					<xs:documentation>Г€Г¤ГҐГ­ГІГЁГґГЁГЄГ ГІГ®Г° ГўГЁГ¤Г  ГЄГ«Г Г±Г±ГЁГґГЁГЄГ Г¶ГЁГЁ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PersonAddressAssociationType">
 		<xs:annotation>
-			<xs:documentation>Адреса, связанные с физическим лицом</xs:documentation>
+			<xs:documentation>ГЂГ¤Г°ГҐГ±Г , Г±ГўГїГ§Г Г­Г­Г»ГҐ Г± ГґГЁГ§ГЁГ·ГҐГ±ГЄГЁГ¬ Г«ГЁГ¶Г®Г¬</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="AddressCategory" type="bc:AddressCategoryType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Вид адреса</xs:documentation>
+					<xs:documentation>Г‚ГЁГ¤ Г Г¤Г°ГҐГ±Г </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Address" type="bc:AddressType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Адрес</xs:documentation>
+					<xs:documentation>ГЂГ¤Г°ГҐГ±</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Person" type="bc:PersonType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Данные о физическом лице</xs:documentation>
+					<xs:documentation>Г„Г Г­Г­Г»ГҐ Г® ГґГЁГ§ГЁГ·ГҐГ±ГЄГ®Г¬ Г«ГЁГ¶ГҐ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PersonDocumentType">
 		<xs:annotation>
-			<xs:documentation>Документ, удостоверяющий личность</xs:documentation>
+			<xs:documentation>Г„Г®ГЄГіГ¬ГҐГ­ГІ, ГіГ¤Г®Г±ГІГ®ГўГҐГ°ГїГѕГ№ГЁГ© Г«ГЁГ·Г­Г®Г±ГІГј</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PersonalDocumentAuthority" type="bc:TextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Орган, выдавший документ, удостоверяющий личность</xs:documentation>
+					<xs:documentation>ГЋГ°ГЈГ Г­, ГўГ»Г¤Г ГўГёГЁГ© Г¤Г®ГЄГіГ¬ГҐГ­ГІ, ГіГ¤Г®Г±ГІГ®ГўГҐГ°ГїГѕГ№ГЁГ© Г«ГЁГ·Г­Г®Г±ГІГј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonalDocumentExpireDate" type="xs:date" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Дата завершения срока действительности документа, удостоверяющего личность</xs:documentation>
+					<xs:documentation>Г„Г ГІГ  Г§Г ГўГҐГ°ГёГҐГ­ГЁГї Г±Г°Г®ГЄГ  Г¤ГҐГ©Г±ГІГўГЁГІГҐГ«ГјГ­Г®Г±ГІГЁ Г¤Г®ГЄГіГ¬ГҐГ­ГІГ , ГіГ¤Г®Г±ГІГ®ГўГҐГ°ГїГѕГ№ГҐГЈГ® Г«ГЁГ·Г­Г®Г±ГІГј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonalDocumentIssueDate" type="xs:date" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Дата выдачи документа, удостоверяющего личность</xs:documentation>
+					<xs:documentation>Г„Г ГІГ  ГўГ»Г¤Г Г·ГЁ Г¤Г®ГЄГіГ¬ГҐГ­ГІГ , ГіГ¤Г®Г±ГІГ®ГўГҐГ°ГїГѕГ№ГҐГЈГ® Г«ГЁГ·Г­Г®Г±ГІГј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonDocumentNumber" type="bc:TextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Номер документа, удостоверяющего личность</xs:documentation>
+					<xs:documentation>ГЌГ®Г¬ГҐГ° Г¤Г®ГЄГіГ¬ГҐГ­ГІГ , ГіГ¤Г®Г±ГІГ®ГўГҐГ°ГїГѕГ№ГҐГЈГ® Г«ГЁГ·Г­Г®Г±ГІГј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonDocumentSeries" type="bc:TextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Серийный номер документа, удостоверяющего личность</xs:documentation>
+					<xs:documentation>Г‘ГҐГ°ГЁГ©Г­Г»Г© Г­Г®Г¬ГҐГ° Г¤Г®ГЄГіГ¬ГҐГ­ГІГ , ГіГ¤Г®Г±ГІГ®ГўГҐГ°ГїГѕГ№ГҐГЈГ® Г«ГЁГ·Г­Г®Г±ГІГј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonDocumentCategory" type="bc:DocumentCategoryType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Вид документа, удостоверяющего личность</xs:documentation>
+					<xs:documentation>Г‚ГЁГ¤ Г¤Г®ГЄГіГ¬ГҐГ­ГІГ , ГіГ¤Г®Г±ГІГ®ГўГҐГ°ГїГѕГ№ГҐГЈГ® Г«ГЁГ·Г­Г®Г±ГІГј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonDocumentNumberCategory" type="bc:IdentificationType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Описание номера докумената, удостоверяющего личность</xs:documentation>
+					<xs:documentation>ГЋГЇГЁГ±Г Г­ГЁГҐ Г­Г®Г¬ГҐГ°Г  Г¤Г®ГЄГіГ¬ГҐГ­Г ГІГ , ГіГ¤Г®Г±ГІГ®ГўГҐГ°ГїГѕГ№ГҐГЈГ® Г«ГЁГ·Г­Г®Г±ГІГј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PersonNameTextType">
 		<xs:annotation>
-			<xs:documentation>Тип составляющей имени физического лица (фамилия,имя, отчество)</xs:documentation>
+			<xs:documentation>Г’ГЁГЇ Г±Г®Г±ГІГ ГўГ«ГїГѕГ№ГҐГ© ГЁГ¬ГҐГ­ГЁ ГґГЁГ§ГЁГ·ГҐГ±ГЄГ®ГЈГ® Г«ГЁГ¶Г  (ГґГ Г¬ГЁГ«ГЁГї,ГЁГ¬Гї, Г®ГІГ·ГҐГ±ГІГўГ®)</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="bc:TextType">
 				<xs:attribute name="personNameInitialIndicator" type="xs:boolean">
 					<xs:annotation>
-						<xs:documentation>Признак инициала в реквизите</xs:documentation>
+						<xs:documentation>ГЏГ°ГЁГ§Г­Г ГЄ ГЁГ­ГЁГ¶ГЁГ Г«Г  Гў Г°ГҐГЄГўГЁГ§ГЁГІГҐ</xs:documentation>
 					</xs:annotation>
 				</xs:attribute>
 			</xs:extension>
@@ -267,366 +267,62 @@
 	</xs:complexType>
 	<xs:complexType name="PersonNameType">
 		<xs:annotation>
-			<xs:documentation>Описание полного имени физического лица</xs:documentation>
+			<xs:documentation>ГЋГЇГЁГ±Г Г­ГЁГҐ ГЇГ®Г«Г­Г®ГЈГ® ГЁГ¬ГҐГ­ГЁ ГґГЁГ§ГЁГ·ГҐГ±ГЄГ®ГЈГ® Г«ГЁГ¶Г </xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PersonGivenName" type="bc:PersonNameTextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Имя собственное</xs:documentation>
+					<xs:documentation>Г€Г¬Гї Г±Г®ГЎГ±ГІГўГҐГ­Г­Г®ГҐ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonMiddleName" type="bc:PersonNameTextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Отчество</xs:documentation>
+					<xs:documentation>ГЋГІГ·ГҐГ±ГІГўГ®</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonSurName" type="bc:PersonNameTextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Фамилия</xs:documentation>
+					<xs:documentation>Г”Г Г¬ГЁГ«ГЁГї</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonNationalSurName" type="bc:PersonNameTextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Фамилия (беларусский язык)</xs:documentation>
+					<xs:documentation>Г”Г Г¬ГЁГ«ГЁГї (ГЎГҐГ«Г Г°ГіГ±Г±ГЄГЁГ© ГїГ§Г»ГЄ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonNationalMiddleName" type="bc:PersonNameTextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Отчетсво (на белорусском языке)</xs:documentation>
+					<xs:documentation>ГЋГІГ·ГҐГІГ±ГўГ® (Г­Г  ГЎГҐГ«Г®Г°ГіГ±Г±ГЄГ®Г¬ ГїГ§Г»ГЄГҐ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonNationalGivenName" type="bc:PersonNameTextType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Собственное имя (на белорусском)</xs:documentation>
+					<xs:documentation>Г‘Г®ГЎГ±ГІГўГҐГ­Г­Г®ГҐ ГЁГ¬Гї (Г­Г  ГЎГҐГ«Г®Г°ГіГ±Г±ГЄГ®Г¬)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="TextType">
 		<xs:annotation>
-			<xs:documentation>Тип данных базового представления строк</xs:documentation>
+			<xs:documentation>Г’ГЁГЇ Г¤Г Г­Г­Г»Гµ ГЎГ Г§Г®ГўГ®ГЈГ® ГЇГ°ГҐГ¤Г±ГІГ ГўГ«ГҐГ­ГЁГї Г±ГІГ°Г®ГЄ</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="xs:string"/>
 		</xs:simpleContent>
 	</xs:complexType>
-<?xml version="1.0" encoding="windows-1251"?>
-<!-- edited with XMLSpy v2023 rel. 2 (x64) (http://www.altova.com) by vitali (home) -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:bc="http://datamodel.nces.by/by-core/0.1" targetNamespace="http://datamodel.nces.by/by-core/0.1">
-	<xs:annotation>
-		<xs:documentation>Базовая модель данных ЭП.</xs:documentation>
-	</xs:annotation>
-	<xs:simpleType name="AddressCategoryType">
-		<xs:annotation>
-			<xs:documentation>Тип адреса</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="LOCATION"/>
-			<xs:enumeration value="MAILING"/>
-			<xs:enumeration value="REGISTRATION"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<xs:complexType name="AddressType">
-		<xs:annotation>
-			<xs:documentation>Описание адреса (адресная информация)</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="AddressApartment" type="bc:TextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Квартира</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AddressBuilding" type="bc:TextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Строение/корпус</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AddressCityName" type="bc:TextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Город</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AddressHouse" type="bc:TextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Дом</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AddressPrivateMailbox" type="bc:TextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Почтовый индекс</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AddressStreet" type="bc:TextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Улица</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="AddressCountry" type="bc:CountryType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Страна</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="CountryType">
-		<xs:annotation>
-			<xs:documentation>Описание страны в соответствии с ISO-</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="Alpha2" type="xs:string" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Alpha 2 код страны</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Наименование страны</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="DocumentCategoryType">
-		<xs:annotation>
-			<xs:documentation>Виды документов удостоверяющих личность</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="DocumentCategoryName" type="bc:TextType" form="qualified" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Наименование вида документа, удостоверяющего личность</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="EducationLevelType">
-		<xs:annotation>
-			<xs:documentation>Уровни полученного образования</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="EducationLevelCode" type="xs:string" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Код уровня образования</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="EducationLevelDescription" type="xs:string" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Описание уровня образования</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="EducationType">
-		<xs:annotation>
-			<xs:documentation>Образование</xs:documentation>
-		</xs:annotation>
-		<xs:complexContent>
-			<xs:extension base="bc:EducationLevelType">
-				<xs:sequence>
-					<xs:element name="EducationDescriptionText" type="bc:TextType" minOccurs="1" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>Нименование учебного заведения, в котором получено образование</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-	<xs:complexType name="HiTechGoodsCandidateType">
-		<xs:annotation>
-			<xs:documentation>Таблица сведений для оценки товаров (работ, услуг) установленным показателям.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="CompanyAddedValue" type="xs:decimal" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Объем валовой добавленной стоимости организации за год, предшествующий году подачи заявления (без НДС), тысяч рублей</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CompanyOutputValue" type="xs:decimal" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Стоимостной объем производства продукции (товаров, работ, услуг) организации за год, предшествующий году подачи заявления (без НДС), тысяч рублей</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CompanyRAndDValue" type="xs:decimal" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Объем расходов на научно-исследовательские, опытно-конструкторские, опытно-технологические работы организации за год, предшествующий году подачи заявления (далее – НИОКТР), включая НИОКТР, выполненные собственными силами и по договорам со сторонними организациями (без НДС), тысяч рублей</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CompanyShippedHiTechExportValue" type="xs:string" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>на экспорт товаров (работ, услуг), претендующих на отнесение к высокотехнологичным из объема отгруженной продукции в целом по организации за год, предшествующий году подачи заявления (без НДС), тысяч рублей</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CompanyShippedHiTechValue" type="xs:decimal" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>товаров (работ, услуг), претендующих на отнесение к высокотехнологичным из объема отгруженной продукции в целом по организации за год, предшествующий году подачи заявления (без НДС), тысяч рублей</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="CompanyShippedValue" type="xs:decimal" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Объем отгруженной продукции в целом по организации за год, предшествующий году подачи заявления (без НДС), тысяч рублей</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="GoodsName" type="bc:TextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Наименование товара (работы, услуги)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="GoodsOKEDCode" type="bc:TextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Код общегосударственного классификатора Республики Беларусь ОКРБ 007-2012 «Классификатор продукции по видам экономической деятельности»</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PatentDescription" type="bc:TextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Наличие охранного документа на объект права промышленной собственности, который применен (содержится, включен) в товаре (работе, услуге), претендующем на отнесение к высокотехнологичному</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="IdentificationType">
-		<xs:annotation>
-			<xs:documentation>Справочник видов идентификаторов</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="IdentificationDescriptionText" type="xs:string" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Описание вида идентификации</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="IdentificationTypeID" type="xs:string" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Идентификатор вида классификации</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="PersonAddressAssociationType">
-		<xs:annotation>
-			<xs:documentation>Адреса, связанные с физическим лицом</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="AddressCategory" type="bc:AddressCategoryType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Вид адреса</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Address" type="bc:AddressType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Адрес</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Person" type="bc:PersonType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Данные о физическом лице</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="PersonDocumentType">
-		<xs:annotation>
-			<xs:documentation>Документ, удостоверяющий личность</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="PersonalDocumentAuthority" type="bc:TextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Орган, выдавший документ, удостоверяющий личность</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PersonalDocumentExpireDate" type="xs:date" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Дата завершения срока действительности документа, удостоверяющего личность</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PersonalDocumentIssueDate" type="xs:date" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Дата выдачи документа, удостоверяющего личность</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PersonDocumentNumber" type="bc:TextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Номер документа, удостоверяющего личность</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PersonDocumentSeries" type="bc:TextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Серийный номер документа, удостоверяющего личность</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PersonDocumentCategory" type="bc:DocumentCategoryType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Вид документа, удостоверяющего личность</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PersonDocumentNumberCategory" type="bc:IdentificationType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Описание номера докумената, удостоверяющего личность</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="PersonNameTextType">
-		<xs:annotation>
-			<xs:documentation>Тип составляющей имени физического лица (фамилия,имя, отчество)</xs:documentation>
-		</xs:annotation>
-		<xs:simpleContent>
-			<xs:extension base="bc:TextType">
-				<xs:attribute name="personNameInitialIndicator" type="xs:boolean">
-					<xs:annotation>
-						<xs:documentation>Признак инициала в реквизите</xs:documentation>
-					</xs:annotation>
-				</xs:attribute>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
-	<xs:complexType name="PersonNameType">
-		<xs:annotation>
-			<xs:documentation>Описание полного имени физического лица</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="PersonGivenName" type="bc:PersonNameTextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Имя собственное</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PersonMiddleName" type="bc:PersonNameTextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Отчество</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PersonSurName" type="bc:PersonNameTextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Фамилия</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PersonNationalSurName" type="bc:PersonNameTextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Фамилия (беларусский язык)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PersonNationalMiddleName" type="bc:PersonNameTextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Отчетсво (на белорусском языке)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PersonNationalGivenName" type="bc:PersonNameTextType" minOccurs="1" maxOccurs="1">
-				<xs:annotation>
-					<xs:documentation>Собственное имя (на белорусском)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
 	<xs:complexType name="PersonType">
 		<xs:annotation>
-			<xs:documentation>Данные о физическом лице</xs:documentation>
+			<xs:documentation>Г„Г Г­Г­Г»ГҐ Г® ГґГЁГ§ГЁГ·ГҐГ±ГЄГ®Г¬ Г«ГЁГ¶ГҐ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PersonEducation" type="bc:EducationType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Образование физического лица</xs:documentation>
+					<xs:documentation>ГЋГЎГ°Г Г§Г®ГўГ Г­ГЁГҐ ГґГЁГ§ГЁГ·ГҐГ±ГЄГ®ГЈГ® Г«ГЁГ¶Г </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonalDocument" type="bc:PersonDocumentType" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Документы, удостоверяющие личность</xs:documentation>
+					<xs:documentation>Г„Г®ГЄГіГ¬ГҐГ­ГІГ», ГіГ¤Г®Г±ГІГ®ГўГҐГ°ГїГѕГ№ГЁГҐ Г«ГЁГ·Г­Г®Г±ГІГј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PersonName" type="bc:PersonNameType" minOccurs="1" maxOccurs="unbounded"/>
@@ -634,7 +330,7 @@
 	</xs:complexType>
 	<xs:complexType name="TextType">
 		<xs:annotation>
-			<xs:documentation>Тип данных базового представления строк</xs:documentation>
+			<xs:documentation>Г’ГЁГЇ Г¤Г Г­Г­Г»Гµ ГЎГ Г§Г®ГўГ®ГЈГ® ГЇГ°ГҐГ¤Г±ГІГ ГўГ«ГҐГ­ГЁГї Г±ГІГ°Г®ГЄ</xs:documentation>
 		</xs:annotation>
 		<xs:simpleContent>
 			<xs:extension base="xs:string"/>
@@ -642,14 +338,14 @@
 	</xs:complexType>
 	<xs:complexType name="TeacherType">
 		<xs:annotation>
-			<xs:documentation>Тип данных описания преподавателя</xs:documentation>
+			<xs:documentation>Г’ГЁГЇ Г¤Г Г­Г­Г»Гµ Г®ГЇГЁГ±Г Г­ГЁГї ГЇГ°ГҐГЇГ®Г¤Г ГўГ ГІГҐГ«Гї</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
 			<xs:extension base="bc:PersonType">
 				<xs:sequence>
 					<xs:element name="SubjectName" type="xs:string" maxOccurs="unbounded">
 						<xs:annotation>
-							<xs:documentation>Перечень предметов</xs:documentation>
+							<xs:documentation>ГЏГҐГ°ГҐГ·ГҐГ­Гј ГЇГ°ГҐГ¤Г¬ГҐГІГ®Гў</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 				</xs:sequence>
